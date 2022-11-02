@@ -4,6 +4,9 @@ import { useState } from "react";
 
 function App() {
   const [counter, setCounter] = useState(0);
+  // const [isAtHome, setIsAtHome] = useState(false);
+  // const handleClick = () => {
+  //   setIsAtHome(!isAtHome);
 
   return (
     <div className="container">
@@ -22,7 +25,7 @@ function App() {
           >
             -
           </button>
-          <p>0</p>
+
           <button
             onClick={() => {
               setCounter(counter + 1);
@@ -32,7 +35,13 @@ function App() {
           </button>
         </div>
         <div className="reset">
-          <button>reset</button>
+          <button
+            onClick={() => {
+              setCounter(counter(0));
+            }}
+          >
+            reset
+          </button>
         </div>
       </main>
       <footer>
